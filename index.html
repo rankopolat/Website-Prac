@@ -1,0 +1,100 @@
+<html>
+<head>
+<link href="bird.css" type="text/css" rel="stylesheet"/>
+<script src="script.js"></script>
+</head>
+<body onLoad="printLetterByLetter()">
+<div class="background">
+	
+<nav class="navigation-bar">
+	<div class="navigation-home">
+		<img src="home.png" />
+	</div>
+	<div class="naviation-contact">
+		<img src="contact.png" />
+	</div>
+	<div class="navigation-work">
+	</div>
+</nav>
+<div class="page-loader">
+	<div class="loading-block">
+		<div class="loading-tail">
+		</div>
+	</div>
+	<div class="loading-title" >
+	<span id="loading-title-id">
+	</span>
+	</div>
+
+	<div class="dog-container">
+		<div class="dog">
+		</div>
+	</div>
+
+</div>
+<div class="navigation-menu">
+
+	<div class="menu-button" onClick="nextCSS()">	
+	</div>
+	<div class="menu-text">
+		<span class="num1">M</span>	
+		<span class="num2">E</span>
+		<span class="num3">N</span>
+		<span class="num4">U</span>
+	</div>
+</div>
+<div class="picture-wrap">
+	<div id="containers">
+		
+				<div class="picture">
+					<img src="apple.jpg" onClick="apple()"/>
+				</div>
+				<div class="picture">
+					<img src="bird.jpg" onClick="doggo()"/>
+				</div>
+				<div class="picture">
+					<img src="bannana.jpg" onClick="banan()"/>
+				</div>
+				<div class="picture">
+					<img src="night.jpg"/>
+				</div>
+				<div class="picture">
+					<img src="parrot.jpg"/>
+				</div>
+				<div class="picture">
+					<img src="parrot.jpg"/>
+				</div>
+				<div class="picture">
+					<img src="parrot.jpg"/>
+				</div>
+				<div class="picture">
+					<img src="parrot.jpg"/>
+				</div>
+				<div class="picture">
+					<img src="parrot.jpg"/>
+				</div>
+			
+	</div>
+	<div class="selector">
+	</div>
+</div>
+</div>
+</body>
+<script>
+const container = document.getElementById("containers");
+// where "container" is the id of the container
+  container.addEventListener("wheel", function (e) {
+    if (e.deltaY > 0) {
+      container.scrollLeft += 100;
+      e.preventDefault();
+// prevenDefault() will help avoid worrisome 
+// inclusion of vertical scroll 
+    }
+    else {
+      container.scrollLeft -= 100;
+      e.preventDefault();
+    }
+  });
+  </script>
+
+</head>

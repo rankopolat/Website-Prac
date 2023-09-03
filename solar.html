@@ -1,0 +1,163 @@
+<html>
+<head>
+<style>
+body{
+	background-color:black;
+	margin:0px;
+		
+}
+
+.earth-orbit{
+ height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+.mars-orbit{
+height:400px;
+width:400px;
+border-radius:50%;
+border:1px solid white;
+position:absolute;
+top:0;
+right:0;
+left:0;
+bottom:0;
+margin:auto;
+
+
+}
+.mars{
+height:25px;
+width:25px;
+border-radius:50%;
+background:red;
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+margin:auto;
+ animation: mars-rotate 6s linear infinite;
+ 
+
+}
+.sun{
+ height: 20px;
+  width: 20px;
+  border-radius: 50%;
+ background-color:yellow;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  
+
+}
+.mars:hover{
+	
+ animation-play-state: paused;
+}
+.sun:hover{
+transform:scale(1.5);
+
+}
+.earth:hover{
+
+  transform:scale(1.5);
+  animation: 0;
+
+}
+.moon {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 100px 100px, green, #fff);
+  animation: moon-rotate 2s linear infinite;
+  position: absolute;
+  
+}
+.solar-system {
+  width: 1000px;
+  heigth: 1000px;
+}
+.earth {
+	transform:scale(1.5);
+   height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: blue;
+  animation: earth-rotate 5s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+@keyframes earth-rotate {
+  from {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
+  }
+}
+
+@keyframes moon-rotate {
+  from {
+    transform: rotate(0deg) translateX(40px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(40px) rotate(-360deg);
+  }
+}
+
+@keyframes mars-rotate{
+	from {
+    transform:rotate(360deg) translateX(200px) rotate(-360deg);
+  }
+  to {
+    transform:rotate(0deg) translateX(200px) rotate(0deg);
+  }
+}
+
+@keyframes mars-hover{
+	from {
+    transform:scale(0%);
+  }
+  to {
+    transform:scale(100%);
+  }
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="solar-system">
+<div class="planet earth-orbit"></div>
+<div class="planet mars-orbit"></div>
+<div class="planet sun"></div>
+<div class="planet mars"></div>
+
+<div class="planet earth">
+<div class="planet moon"></div>
+</div>
+</div>
+</body>
+</html>
+min-height: 100vh; 
+	display: flex; 
+	justify-content: center; 
+	align-items: center;
