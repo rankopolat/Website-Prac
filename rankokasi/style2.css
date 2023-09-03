@@ -1,0 +1,128 @@
+body{
+	background-color:black;
+	margin:0px;
+	height:100vh;
+	
+	display:grid;
+     place-items: center;
+	
+		
+}
+.page-loader{
+	position:absolute;
+	z-index:1000;
+	width:100%;
+	height:100%;
+	background-color:black;
+	transition:0.1s;
+}
+
+.rectangle-wrapper,.big-rectangle{
+	
+	width:30vmin;
+	
+}
+.rectangle-wrapper, .rectangle{
+	aspect-ratio:5/7;
+}
+
+.rectangle{
+	position:absolute;
+	background-color:rgb(255, 255, 255,0.05);
+}
+.big-rectangle img{
+
+	object-fit:cover;
+	width:100%;
+	height:100%;
+	border-radius:1vmin;
+	transform:scale(1.01);
+}
+.big-rectangle{
+	
+	width:30vmin;
+	border-radius:1vmin;
+	transition:0.1s;
+	
+}
+.small-rectangle img{
+	object-fit:cover;
+	width:100%;
+	height:100%;
+	border-radius:1vmin;
+	transform:scale(1.01);
+}
+.small-rectangle{
+	transition:0.2s;
+	width:15vmin;
+	border-radius:1vmin;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+}
+
+.big-rectangle:nth-child(1){
+	
+	transform:translateX(-15%) rotate(-5deg);
+	z-index:7;
+}
+.big-rectangle:nth-child(2){
+	
+	transform:translateX(-20%) rotate(-5deg);
+	z-index:6;
+}
+.big-rectangle:nth-child(3){
+	
+transform:translateX(-5%)
+				translateY(-2%) rotate(5deg);
+	z-index:5;
+}
+.big-rectangle:nth-child(4){
+
+	transform: rotate(5deg);
+	z-index:8;
+}
+.rectangle-wrapper:hover > .big-rectangle:nth-child(1){
+	background-color:blue;
+	transform:translateX(70%) translateY(5%) rotate(30deg);
+	z-index:8;
+}
+.rectangle-wrapper:hover >.big-rectangle:nth-child(2){
+	background-color:red;
+transform:translateX(10%) rotate(10deg);
+z-index:7;
+}
+.rectangle-wrapper:hover >.big-rectangle:nth-child(3){
+	background-color:yellow;
+transform:translateX(-40%) translateY(-5%) rotate(-5deg);
+z-index:6;
+}
+.rectangle-wrapper:hover >.big-rectangle:nth-child(4){
+background-color:green;
+	transform: translateX(-90%) rotate(-25deg);
+	z-index:5;
+
+}
+
+.rectangle-wrapper:hover > .small-rectangle:nth-child(5){
+	background-color:blue;
+	transform:translateX(200%) translateY(-160%) rotate(-15deg);
+	z-index:8;
+}
+.rectangle-wrapper:hover >.small-rectangle:nth-child(6){
+	background-color:red;
+transform:translateX(160%)  translateY(100%)rotate(10deg);
+z-index:7;
+}
+.rectangle-wrapper:hover >.small-rectangle:nth-child(7){
+	background-color:yellow;
+transform:translateX(-250%) translateY(-200%) rotate(10deg);
+z-index:6;
+}
+.rectangle-wrapper:hover >.small-rectangle:nth-child(8){
+background-color:green;
+	transform: translateX(-250%) translateY(90%) rotate(-25deg);
+	z-index:5;
+
+}
+
